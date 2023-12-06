@@ -14,7 +14,7 @@ void geom(void)
 	char reg[3] = "no";
 	
 	printf("\nWenn du die Zahlen fuer die Formeln sehen willst, dann schreibe Ja oder ja:\n");
-	scanf("%s" ,&reg);
+	scanf("%s" ,reg);
 	fflush(stdin);
 		
 	// Hier wird ueberprueft, ob die Werte fuer die Faecher angezeigt werden sollen und anschliessend geprintet.

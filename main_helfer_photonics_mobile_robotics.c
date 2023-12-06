@@ -36,7 +36,7 @@ int main(void)
 	{
 		// Abfrage ob die Werte fuer die jeweiligen Faecher angezeigt werden sollen.
 		printf("\nWenn du die Zahlen fuer die Faecher sehen willst, dann schreibe Ja oder ja:\n");
-		scanf("%s" ,&reg);
+		scanf("%s" ,reg);
 		fflush(stdin);
 		
 		// Hier wird ueberprueft, ob die Werte fuer die Faecher angezeigt werden sollen und anschliessend geprintet.
@@ -83,7 +83,7 @@ int main(void)
 		
 		// Abfrage ob eine weitere Rechnung durchgefuert werden soll.
 		printf("Willst du eine weitere Rechnung durchfueren? Wenn ja, dann schreibe ja oder Ja.\n");
-		scanf("%s" ,&weitereRechnung);
+		scanf("%s" , weitereRechnung);
 		fflush(stdin);
 	}
 	

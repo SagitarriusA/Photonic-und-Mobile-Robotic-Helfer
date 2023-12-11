@@ -17,8 +17,7 @@ Datum: 4.12.2023
 #include "totalreflektion.h"
 #define Pi (3.141592654)
 
-void totalreflektion(void) 
-{				
+void totalreflektion(void) {				
 //~~~~~~~~~~~~~~~~~~~~~~~~Variablen~~~~~~~~~~~~~~~~~~~~~~~~
 	double  n1 = 0;			//Brechzahl 1. Medium
 	double  n2 = 0;			//Brechzahl 2. Medium
@@ -41,21 +40,22 @@ void totalreflektion(void)
 	scanf("%lf", &Tk);
 	fflush(stdin);
 //~~~~~~~~~~~~Berechnung der Formelumstellung~~~~~~~~~~~~
-	if(n1 == 0){
+	if(n1 == 0 && n2 == !0 && Tk == !0){
 		a = 2;
 		printf("Sie haben sich für die Brechzahl n1 entschieden");
 	}
-	else if(n2 == 0){
+	else if(n2 == 0 && n1 == !0 && Tk == !0){
 		a = 3;
 		printf("Sie haben sich für die Brechzahl n2 entschieden");
 		}
-	else if(Tk == 0){
+	else if(Tk == 0 && n2 == !0 && n1 == !0){
 		a = 1;
 		printf("Sie haben sich für den Winkel Tk entschieden");
 		}
 	else{
 		printf("\033[0;32m\nVERPISS DICH, DU LUMP!\033[0m\n\n");
 	}
+	
 //~~~~~~~~~~~~~~~~~~~~~~~~Ausgabe~~~~~~~~~~~~~~~~~~~~~~~~
 switch(a){
 

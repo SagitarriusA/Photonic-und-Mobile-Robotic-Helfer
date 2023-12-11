@@ -34,7 +34,7 @@ void vector()
 	printf("3 - Skalarprodukt in n\n");
 	printf("4 - Abstand Punkt-Gerade in 2D\n");
 	printf("5 - Abstand Punkt-Gerade in 3D\n");
-	printf("Bitte wähle eine Operation:\n");
+	printf("Bitte waehle eine Operation:\n");
 
 	scanf("%i", &menue);
 
@@ -52,11 +52,11 @@ void vector()
 void norm(void)
 {
 	int n = 0;
-	printf("Bitte Dimension wählen:\n");
+	printf("Bitte Dimension waehlen:\n");
 	scanf("%i",&n);
 	float vector1[n];
 
-	printf("Bitte den ersten Vektor abfüllen:\n");
+	printf("Bitte den ersten Vektor abfuellen:\n");
 
 	for(int i = 0; i < n; i++)
 	{
@@ -82,7 +82,7 @@ void cross(void)
 	int n = 3;
 	float vector1[n], vector2[n];
 
-	printf("Bitte den ersten Vektor abfüllen:\n");
+	printf("Bitte den ersten Vektor abfuellen:\n");
 
 	for(int i = 0; i < n; i++)
 	{
@@ -90,7 +90,7 @@ void cross(void)
 		fflush(stdin);		// Buffer leeren um scanf() nochmals auszuführen
 	}
 
-	printf("\n\nBitte den zweiten Vektor abfüllen:\n");
+	printf("\n\nBitte den zweiten Vektor abfuellen:\n");
 
 	for(int i = 0; i < n; i++)
 	{
@@ -129,11 +129,11 @@ void cross(void)
 void dot(void)
 {
 	int n = 0;
-	printf("Bitte Dimension wählen:\n");
+	printf("Bitte Dimension waehlen:\n");
 	scanf("%i",&n);
 	float vector1[n], vector2[n];
 
-	printf("Bitte den ersten Vektor abfüllen:\n");
+	printf("Bitte den ersten Vektor abfuellen:\n");
 
 	for(int i = 0; i < n; i++)
 	{
@@ -141,7 +141,7 @@ void dot(void)
 		fflush(stdin);		// Buffer leeren um scanf() nochmals auszuführen
 	}
 
-	printf("\n\nBitte den zweiten Vektor abfüllen:\n");
+	printf("\n\nBitte den zweiten Vektor abfuellen:\n");
 
 	for(int i = 0; i < n; i++)
 	{

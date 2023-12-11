@@ -34,7 +34,7 @@ Datum: 4.12.2023
 
 // ADD FORMULAS HERE, keywords: PLUS,MINUS,TIMES,DIVISION,POWER,ROOT,LOG
 #define __DO__FORMULAS__IMPL \
-    __FORMULA__IMPL(U, R, TIMES, two) \
+    __FORMULA__IMPL(U, R, TIMES, I) \
     __FORMULA__IMPL(P, U, TIMES, I) \
     __FORMULA__IMPL(E, P, TIMES, t) \
     __FORMULA__IMPL(I, J, TIMES, A) \

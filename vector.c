@@ -2,10 +2,11 @@
 Beschreibung: Kreuz- und Skalarprodukt
 Autor: Ramon Tarca, Ryoya Bauer
 Firma: FHGR
-Version: 1.0
-Datum: 04.12.2023
+Version: 1.1
+Datum: 11.12.2023
 Änderungen:
-1.0 04.12.2023 Erste Version
+1.0  04.12.2023 Erste Version
+1.1  11.12.2023 Kleine Änderungen
 */
 
 #include <stdio.h>

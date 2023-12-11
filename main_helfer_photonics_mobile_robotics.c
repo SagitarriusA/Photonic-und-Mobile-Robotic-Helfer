@@ -25,6 +25,7 @@ Datum: 4.12.2023
 #include "vector.h"
 #include "rezepte.h"
 #include "hangman.h"
+#include "elektromagnetischesSpektrum.h"
 
 // Mit main beginnt das Programm.
 int main(void) 
@@ -46,6 +47,7 @@ int main(void)
 			printf("Fuer Vektorgeometrie Formeln waehle die 5.\n");
 			printf("Fuer Rezepte waehle die 6.\n");
 			printf("Fuer Hangman waehle die 7.\n");
+			printf("Fuer Elektromagnetisches Spektrum waehle die 8.\n");
 		
 		// Abfrage des gewuenschten Fachs.
 			printf("\nWelches Fach willst du bearbeiten:\n");
@@ -75,6 +77,9 @@ int main(void)
 				break;
 			case 7:
 				hangman();
+				break;
+			case 8:
+				elektromagnetischesSpektrum();
 				break;
 			default:
 				printf("Der eingegebene Wert ist keinem Fach zugewiesen!\n\n");

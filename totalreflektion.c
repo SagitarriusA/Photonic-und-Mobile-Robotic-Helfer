@@ -40,15 +40,15 @@ void totalreflektion(void) {
 	scanf("%lf", &Tk);
 	fflush(stdin);
 //~~~~~~~~~~~~Berechnung der Formelumstellung~~~~~~~~~~~~
-	if(n1 == 0 && n2 == !0 && Tk == !0){
+	if(n1 == 0 && n2 > 0 && Tk > 0){
 		a = 2;
 		printf("Sie haben sich für die Brechzahl n1 entschieden");
 	}
-	else if(n2 == 0 && n1 == !0 && Tk == !0){
+	else if(n2 == 0 && n1 > 0 && Tk > 0){
 		a = 3;
 		printf("Sie haben sich für die Brechzahl n2 entschieden");
 		}
-	else if(Tk == 0 && n2 == !0 && n1 == !0){
+	else if(Tk == 0 && n2 > 0 && n1 > 0){
 		a = 1;
 		printf("Sie haben sich für den Winkel Tk entschieden");
 		}
@@ -67,6 +67,7 @@ switch(a){
 		}
 
 		else{						//Abbruchbedingung
+		
 			printf("\nDie erste Brechungszahl muss groesser als die zweite Brechungszahl sein!\n\n");
 		}
 		break;

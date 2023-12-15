@@ -20,8 +20,6 @@ void mechanik()
 {
 	char ja[3] = "ja";
 	char Ja[3] = "Ja";
-	int formel = 0;
-	char reg[3] = "no";
 	char weitereRechnungHang[3] = "ja";
 	
 	while(strcmp (weitereRechnungHang, ja) == 0 || strcmp (weitereRechnungHang, Ja) == 0)

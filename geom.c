@@ -22,7 +22,6 @@ void geom(void)
 	char ja[3] = "ja";
 	char Ja[3] = "Ja";
 	int formel = 0;
-	char reg[3] = "no";
 	char weitereRechnungGeom[3] = "ja";
 	
 	while(strcmp (weitereRechnungGeom, ja) == 0 || strcmp (weitereRechnungGeom, Ja) == 0)

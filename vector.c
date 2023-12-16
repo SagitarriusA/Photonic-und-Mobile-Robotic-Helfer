@@ -21,7 +21,7 @@ void dot(void);
 void distance2D(void);
 void distance3D(void);
 float normInternal(int n, float *vector);
-float crossInternal(int n, float *vector1, float *vector2);
+void crossInternal(int n, float *vector1, float *vector2);
 float dotInternal(int n, float *vector1, float *vector2);
 
 void vector()
@@ -262,7 +262,39 @@ void distance2D(void)
 
 void distance3D(void)
 {
-	printf("placeholder\n");
+	int n = 3;
+    float vector1[n], vector2[n], point[n], u[n];
+    float result=0;
+
+    printf("d=<P-S0, hut n>\nBitte die Gerade definieren (g):\n"); //Gerade
+    for (int i = 0; i < n; i++) {
+        scanf("%f", &vector1[i]);
+        fflush(stdin);
+    }
+
+    printf("\n\nBitte einen Punkt auf dieser Gerade definieren (S0):\n"); //s0
+    for (int i = 0; i < n; i++) {
+        scanf("%f", &vector2[i]);
+        fflush(stdin);
+    }
+
+    printf("\n\nBitte einen Punkt definieren fuer den Gerade-Punkteabstand (P):\n"); //Abstandspunkt
+    for (int i = 0; i < n; i++) {
+        scanf("%f", &point[i]);
+        fflush(stdin);
+    }
+	
+    for (int i = 0; i < n; i++) {
+        u[i] = point[i] - vector2[i];
+    }
+	
+	crossInternal(n, u, vector1);
+	
+	result = normInternal(n,u) / normInternal(n, vector1);
+
+    printf("\nDer Abstand betraegt %f\n", result);
+
+    return;
 }
 
 float normInternal(int n, float *vector1)
@@ -278,7 +310,7 @@ float normInternal(int n, float *vector1)
 	return result;
 }
 
-float crossInternal(int n, float *vector1, float *vector2) {
+void crossInternal(int n, float *vector1, float *vector2) {
     float result[n];
     int count1 = 1;
     int count2 = 2;
@@ -294,7 +326,11 @@ float crossInternal(int n, float *vector1, float *vector2) {
             count2 = 0;
         }
     }
-    return result[n];
+	for (int i = 0; i < n; i++) {
+        vector1[i] = result[i];
+    }
+		
+    return;
 }
 
 float dotInternal(int n, float *vector1, float *vector2)

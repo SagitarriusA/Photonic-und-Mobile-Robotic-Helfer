@@ -12,6 +12,8 @@ set programmname_9=totalreflektion
 set programmname_10=rezepte
 set programmname_11=hangman
 set programmname_12=elektromagnetischesSpektrum
+set programmname_13=hangman_spiel
+set programmname_14=SSP
 
 echo %~n1 wird Ausgeführt
 
@@ -21,7 +23,7 @@ REM cd Documents\Studium_FHGR\1_Semester\Informatik_1\C_Programme
 
 REM für float evtl "gcc -std=c99 %programmname%.c -o %programmname%" benutzen
 
-gcc -Wall -Wextra -pedantic -std=c99 %programmname%.c %programmname_2%.c %programmname_3%.c %programmname_4%.c %programmname_5%.c %programmname_6%.c %programmname_7%.c %programmname_8%.c %programmname_9%.c %programmname_10%.c %programmname_11%.c %programmname_12%.c -o %programmname% 
+gcc -Wall -Wextra -pedantic -std=c99 %programmname%.c %programmname_2%.c %programmname_3%.c %programmname_4%.c %programmname_5%.c %programmname_6%.c %programmname_7%.c %programmname_8%.c %programmname_9%.c %programmname_10%.c %programmname_11%.c %programmname_12%.c %programmname_13%.c %programmname_14%.c -o %programmname% 
 
 REM gcc %programmname%.c -o %programmname%
 

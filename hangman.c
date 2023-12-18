@@ -15,8 +15,10 @@ Datum: 18.12.2023
 #include <string.h>
 #include <math.h>
 #include "hangman.h"
+#include "hangman_spiel.h"
+#include "SSP.h"
 
-//testkommentar
+
 void hangman(void)
 {
 	char ja[3] = "ja";
@@ -27,8 +29,8 @@ void hangman(void)
 	{
 
 		int menu = 0;
-		printf("\n Press 1 for Hangman. \n");
-		printf("\n Press 2 for. \n");
+		printf("\nPress 1 for Hangman. \n");
+		printf("\nPress 2 for. \n");
 
 		scanf("%i", &menu);
 		fflush(stdin);
@@ -36,15 +38,15 @@ void hangman(void)
 		switch(menu)
 	{
 		case 1:
-		hangman();
-		break;
+			hangman_spiel();
+			break;
 
 		case 2:
-		SSP();
-		break;
+			SSP();
+			break;
 
 		default:
-		printf("Ungueltige Eingabe.");
+			printf("Ungueltige Eingabe.");
 
 	}
 

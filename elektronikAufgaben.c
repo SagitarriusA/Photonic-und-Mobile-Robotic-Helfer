@@ -29,7 +29,7 @@ void diode(int *schwierigkeit, float *loesung, float *musterloesung);
 float eingabeLoesung();
 void loesungsweg(int *thema, int *schwierigkeit);
 
-// Hier steht das Hauptprogramm dieser Funktion
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~// Hier steht das Hauptprogramm dieser Funktion //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 void elektronikAufgaben()
 {
 	// Variable deklarieren
@@ -83,8 +83,8 @@ void elektronikAufgaben()
 				fflush(stdin);
 				// Musterlösung ausgeben
 				if(tryAgain != 1) {
-					// Lösungsweg anzeigen
 					printf("\n");
+					// Lösungsweg anzeigen
 					loesungsweg(&thema, &schwierigkeit);
 					printf("Die eingegebene Loesung ist: %f\n", loesung);
 				}
@@ -136,8 +136,8 @@ void eingabe(int *thema, int *schwierigkeit)
 		}
 	}
 }
-
-// Aufgaben für Ohmsches Gesetz
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~// Aufgaben zu den entsprechenden Themen //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+// Aufgaben für Ohmsches Gesetz, sortiert nach Schwierigkeitsgrad 1-3
 void ohmschesGesetz(int *schwierigkeit, float *loesung, float *musterloesung){
 	if((*schwierigkeit) == 1) {
 		printf("Sie haben 2 parallel geschaltene Widerstände mit R1 = R2 = 120ohm.\n");
@@ -157,10 +157,11 @@ void ohmschesGesetz(int *schwierigkeit, float *loesung, float *musterloesung){
    		printf("Wie gross ist der Gesamtwiderstand dieser Konfiguration in kOhm?\n");
 		*musterloesung = 1.25;
 	}
+	// Eingabe der Lösung
 	*loesung = eingabeLoesung();
 }
 
-// Aufgaben für Kondensator
+// Aufgaben für Kondensator, sortiert nach Schwierigkeitsgrad 1-3
 void kondensator(int *schwierigkeit, float *loesung, float *musterloesung){
 	if((*schwierigkeit) == 1) {
 		printf("Ein Kondensator wird über einen Widerstand geladen.\n");
@@ -180,10 +181,11 @@ void kondensator(int *schwierigkeit, float *loesung, float *musterloesung){
 		printf("Welche Spannung in Volt auf zwei Kommastellen gerundet liegt am Kondensator nach t = 70s an?\n");
 		*musterloesung = 2.52;
 	}
+	// Eingabe der Lösung
 	*loesung = eingabeLoesung();
 }
 
-// Aufgaben für Spulen
+// Aufgaben für Spulen, sortiert nach Schwierigkeitsgrad 1-3
 void spule(int *schwierigkeit, float *loesung, float *musterloesung){
 	if((*schwierigkeit) == 1) {
 		printf("Mit welcher Regel kann die Richtung eines kreisfoermigen Magnetfeldes um einen Leiter bestimmt werden?\n");
@@ -204,10 +206,11 @@ void spule(int *schwierigkeit, float *loesung, float *musterloesung){
 		printf("Welcher Strom in Ampere auf zwei Kommastellen gerundet fliesst nach einer Zeit von t=2ms?\n");
 		*musterloesung = 1.34;
 	}
+	// Eingabe der Lösung
 	*loesung = eingabeLoesung();
 }
 
-// Aufgaben für Dioden
+// Aufgaben für Dioden, sortiert nach Schwierigkeitsgrad 1-3
 void diode(int *schwierigkeit, float *loesung, float *musterloesung){
 	if((*schwierigkeit) == 1) {
 		 printf("Wie gross ist die Spannung in Volt, ab der eine Silizium-Halbleiterdiode in Durchlassichtung leitet?\n");
@@ -249,9 +252,10 @@ float eingabeLoesung(){
 	return loesung;
 }
 
-// Lösungsweg anzeigen
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~// Lösungen zu den jeweiligen Themen //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 void loesungsweg(int *thema, int *schwierigkeit){
 	switch (*thema) {
+		//Lösungen zum Thema Ohmsches Gesetz
 		case 1: 	if((*schwierigkeit) == 1) {
  						printf("Gesamtwiderstand: 1/R = (1/R1) + (1/R2).\n");
     					printf("mit R1 = R2 => 1/R = 2/R1 => R = R1/2 = 120Ohm/2 = 60Ohm.\n");
@@ -265,6 +269,7 @@ void loesungsweg(int *thema, int *schwierigkeit){
     					printf("Da R1+R3 = R2+R4 => R = (R1+R3)/2 = (150 Ohm+2.35 kOhm)/2 = 1.25kOhm\n");
 					}
 					break;
+		//Lösungen zum Thema Kondensator
 		case 2: 	if((*schwierigkeit) == 1) {
 						printf("Die Spannung an einem Kondensator, der über einen Widerstand geladen wird, ist nach 1 Tau auf 63%% und nach 5 Tau auf 99%% angestiegen.\n");
 					}
@@ -276,6 +281,7 @@ void loesungsweg(int *thema, int *schwierigkeit){
 						printf("U(t) = U0*e^-(t/Tau) = U0*e^-(t/(R*C)) = 5V*e^-(70s/(10kOhm*10mF)) = 2.52V\n");
 					}
 					break;
+		//Lösungen zum Thema Spulen
 		case 3: 	if((*schwierigkeit) == 1) {
 						printf("Um die Richtung eines Magnetfeldes zu bestimmen, gilt die Rechte-Hand-Regel\n");
 					}
@@ -286,6 +292,7 @@ void loesungsweg(int *thema, int *schwierigkeit){
 						printf("I(t) = I0*e^-(R*t/L) = 2A*e^-(100Ohm*2ms/500mH) = 1.34A\n");
 					}
 					break;
+		//Lösungen zum Thema Dioden
 		case 4: 	if((*schwierigkeit) == 1) {
 						printf("Die Spannung beträgt ca 0.7V\n");
 					}

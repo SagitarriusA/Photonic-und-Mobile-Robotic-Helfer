@@ -39,6 +39,10 @@ void hangman(void)
 		hangman();
 		break;
 
+		case 2:
+		SSP();
+		break;
+
 		default:
 		printf("Ungueltige Eingabe.");
 

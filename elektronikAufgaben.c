@@ -148,7 +148,7 @@ void ohmschesGesetz(int *schwierigkeit, float *loesung, float *musterloesung){
 		printf("R1 ist parallel mit R2, R3 ist parallel mit R4. Die Parallelschaltungen sind in Serie geschaltet.\n");
     	printf("R1 = 50 Ohm\t R2 = 150 Ohm\t R3 = 1 kOhm\t R4 = 50 Ohm\n");
     	printf("Wie gross ist der Gesamtwiderstand in Ohm auf zwei Komastellen gerundet?\n");
-		*musterloesung = 85.120000;
+		*musterloesung = 85.12;
 	}
 	else if((*schwierigkeit) == 3){
 		printf("R1 und R3 sind in Serie geschaltet, R2 und R4 sind ebenfalls seriell geschalten\n");

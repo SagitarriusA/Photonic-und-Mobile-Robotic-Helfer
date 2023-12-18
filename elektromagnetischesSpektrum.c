@@ -18,7 +18,7 @@ Datum: 4.12.2023
 
 void elektromagnetischesSpektrum(void)
 {
-	double wellenlaenge = 0;
+	double wellenlaenge;
 	double frequenz = C / wellenlaenge;
 	double a = 0;
 	char ja[3] = "ja";

@@ -190,7 +190,7 @@ void spule(int *schwierigkeit, float *loesung, float *musterloesung){
 		printf("1) Rechte-Hand-Regel\n");
    		printf("2) Linke-Hand-Regel\n");
     	printf("3) Es gibt keine Regel\n");
-		*musterloesung = 31;
+		*musterloesung = 1;
 	}
 	else if((*schwierigkeit) == 2) {
 		printf("Durch eine Spule fliesst nach einer Zeit von 20ms ein Strom von 50mA und eine Spannung von 2V liegt an der Spule.\n");
@@ -252,8 +252,8 @@ void loesungsweg(int *thema, int *schwierigkeit){
 	switch (*thema) {
 		case 1: 	if((*schwierigkeit) == 1) {
  						printf("Um den Gesamtwiderstand aus R1 und R2 zu berechnen gilt: 1/R = (1/R1) + (1/R2).\n");
-    					printf("Da R1=R2 ist, gilt R= R1/2. Somit gilt: R = 120Ohm/2 = 60Ohm.\n");
-   						printf("Nach dem Ohmschen Gesetz gilt: U= R * I = 60Ohm * 0.12A = 7.2V\n");
+    					printf("Da R1 = R2 ist, gilt R = R1/2. Somit gilt: R = 120Ohm/2 = 60Ohm.\n");
+   						printf("Nach dem Ohmschen Gesetz gilt: U = R * I = 60Ohm * 0.12A = 7.2V\n");
 					}
 					else if((*schwierigkeit) == 2){
 						printf("Die korrekte Formel lautet: R = (R1*R2)/(R1+R2) + (R3*R4)/(R3+R4)\n");
@@ -261,7 +261,7 @@ void loesungsweg(int *thema, int *schwierigkeit){
 					}
 					else if((*schwierigkeit) == 3){
 						printf("Da R1 und R3, sowie R2 und R4 jeweils Parallel geschalten sind gilt:\n");
-    					printf("(R1+R3)*(R2+R4) / (R1+R2+R3+R4)\n");
+    					printf("R = (R1+R3)*(R2+R4) / (R1+R2+R3+R4)\n");
     					printf("Da R1+R3 = R2+R4 ist, halbiert sich der Gesamtwiderstand und ergibt 1.25kOhm\n");
 					}
 					break;

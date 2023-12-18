@@ -15,6 +15,7 @@ Datum: 4.12.2023
 #include <math.h>
 #include "hangman.h"
 
+//testkommentar
 void hangman(void)
 {
 	char ja[3] = "ja";

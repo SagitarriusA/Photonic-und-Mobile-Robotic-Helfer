@@ -141,7 +141,7 @@ void eingabe(int *thema, int *schwierigkeit)
 void ohmschesGesetz(int *schwierigkeit, float *loesung, float *musterloesung){
 	if((*schwierigkeit) == 1) {
 		printf("Sie haben 2 parallel geschaltene Widerstände mit R1 = R2 = 120ohm.\n");
-    	printf("Wie gross ist die Spannung in Volt, wenn ein Gesamtstrom von 120mA fliesst?\n");
+    	printf("Wie gross ist die Gesamtspannung in Volt, wenn ein Gesamtstrom von I = 120mA fliesst?\n");
 		*musterloesung = 7.2;
 	}
 	else if((*schwierigkeit) == 2) {
@@ -151,7 +151,7 @@ void ohmschesGesetz(int *schwierigkeit, float *loesung, float *musterloesung){
 		*musterloesung = 85.120000;
 	}
 	else if((*schwierigkeit) == 3){
-		printf("R1 und R3 sind in Serie geschaltet. Ebenso sind R2 und R4 Seriell\n");
+		printf("R1 und R3 sind in Serie geschaltet, R2 und R4 sind ebenfalls seriell geschalten\n");
     	printf("R1 und R3 sind parallel zu R2 und R4 geschalten\n");
     	printf("R1 = 150 Ohm\t R2 = 1 kOhm\t R3 = 2.35 kOhm\t R4 = 1.5 kOhm\n");
    		printf("Wie gross ist der Gesamtwiderstand dieser Konfiguration in kOhm?\n");
@@ -171,13 +171,13 @@ void kondensator(int *schwierigkeit, float *loesung, float *musterloesung){
 		*musterloesung = 2;
 	}
 	else if((*schwierigkeit) == 2) {
-		printf("Durch ein Kondensator mit C=10mF fliest für 1ms ein Strom von 20mA.\n");
-		printf("Welche Spannung in Volt hat der zuvor spannungslose Kondensator nun anliegen?\n");
+		printf("Durch ein Kondensator mit C = 10mF fliest für t = 1ms ein Strom von I = 20mA.\n");
+		printf("Welche Spannung in Volt liegt nun am zuvor spannungslose Kondensator an?\n");
 		*musterloesung = 2;
 	}
 	else if((*schwierigkeit) == 3){
-		printf("Ein Kondensator C=10mF liegt mit einem Widerstand R=10kOhm in Serie an einer Spannung von 5V.\n");
-		printf("Welche Spannung in Volt auf zwei Kommastellen gerundet liegt am Kondensator nach t=70s an?\n");
+		printf("Ein Kondensator C = 10mF liegt mit einem Widerstand R = 10kOhm in Serie an einer Spannung von U = 5V.\n");
+		printf("Welche Spannung in Volt auf zwei Kommastellen gerundet liegt am Kondensator nach t = 70s an?\n");
 		*musterloesung = 2.52;
 	}
 	*loesung = eingabeLoesung();
@@ -193,12 +193,14 @@ void spule(int *schwierigkeit, float *loesung, float *musterloesung){
 		*musterloesung = 1;
 	}
 	else if((*schwierigkeit) == 2) {
-		printf("Durch eine Spule fliesst nach einer Zeit von 20ms ein Strom von 50mA und eine Spannung von 2V liegt an der Spule.\n");
-		printf("Welche Induktivität in mH hat die Spule?\n");
+		printf("Durch eine Spule fliesst nach einer Zeit von t = 20ms ein Strom von I = 50mA.\n");
+		printf("An der Spule liegt eine Spannung von U = 2V an.\n");
+		printf("Welche Induktivität in mHenry hat die Spule?\n");
 		*musterloesung = 800;
 	}
 	else if((*schwierigkeit) == 3){
-		printf("Durch eine Spule mit L=500mH fliesst ein Strom von I=2A. Die Spule wird nun über einem Widerstand R=100Ohm entladen.\n");
+		printf("Durch eine Spule mit L = 500mH fliesst ein Strom von I = 2A.\n");
+		printf("Die Spule wird nun über einem Widerstand mit R = 100Ohm entladen.\n");
 		printf("Welcher Strom in Ampere auf zwei Kommastellen gerundet fliesst nach einer Zeit von t=2ms?\n");
 		*musterloesung = 1.34;
 	}
@@ -251,24 +253,23 @@ float eingabeLoesung(){
 void loesungsweg(int *thema, int *schwierigkeit){
 	switch (*thema) {
 		case 1: 	if((*schwierigkeit) == 1) {
- 						printf("Um den Gesamtwiderstand aus R1 und R2 zu berechnen gilt: 1/R = (1/R1) + (1/R2).\n");
-    					printf("Da R1 = R2 ist, gilt R = R1/2. Somit gilt: R = 120Ohm/2 = 60Ohm.\n");
+ 						printf("Gesamtwiderstand: 1/R = (1/R1) + (1/R2).\n");
+    					printf("mit R1 = R2 => 1/R = 2/R1 => R = R1/2 = 120Ohm/2 = 60Ohm.\n");
    						printf("Nach dem Ohmschen Gesetz gilt: U = R * I = 60Ohm * 0.12A = 7.2V\n");
 					}
 					else if((*schwierigkeit) == 2){
-						printf("Die korrekte Formel lautet: R = (R1*R2)/(R1+R2) + (R3*R4)/(R3+R4)\n");
-    					printf("Der Gesamtwiderstand der Schaltung beträgt somit 85.12 Ohm\n");
+						printf("Gesamtwiderstand: R = (R1*R2)/(R1+R2) + (R3*R4)/(R3+R4) = 85.12 Ohm\n");
 					}
 					else if((*schwierigkeit) == 3){
-						printf("Da R1 und R3, sowie R2 und R4 jeweils Parallel geschalten sind gilt:\n");
     					printf("R = (R1+R3)*(R2+R4) / (R1+R2+R3+R4)\n");
-    					printf("Da R1+R3 = R2+R4 ist, halbiert sich der Gesamtwiderstand und ergibt 1.25kOhm\n");
+    					printf("Da R1+R3 = R2+R4 => R = (R1+R3)/2 = (150 Ohm+2.35 kOhm)/2 = 1.25kOhm\n");
 					}
 					break;
 		case 2: 	if((*schwierigkeit) == 1) {
 						printf("Die Spannung an einem Kondensator, der über einen Widerstand geladen wird, ist nach 1 Tau auf 63%% und nach 5 Tau auf 99%% angestiegen.\n");
 					}
 					else if((*schwierigkeit) == 2){
+						printf("I*t=C*U\n");
 						printf("U = I*t/C = 20mA*1ms/10mF = 2V\n");
 					}
 					else if((*schwierigkeit) == 3){

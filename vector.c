@@ -205,7 +205,7 @@ void distance2D(void)
 {
     int n = 2;
     float vector1[n], vector2[n], point[n];
-    float dotrestult=0;
+
 
     printf("d=<P-S0, hut n>\nBitte die Gerade definieren (g):\n"); //Gerade
 
@@ -277,7 +277,7 @@ void distance3D(void)
     float vector1[n], vector2[n], point[n], u[n];
     float result=0;
 
-    printf("d=<P-S0, hut n>\nBitte die Gerade definieren (g):\n"); //Gerade
+    printf("d=|(P-S0) x v|/|v|>\nBitte die Gerade/den Vektor definieren (v):\n"); //Gerade/Vektor
     for (int i = 0; i < n; i++) {
         scanf("%f", &vector1[i]);
         fflush(stdin);
@@ -308,6 +308,10 @@ void distance3D(void)
     return;
 }
 
+
+
+//-----Unterfunktionen (Vektorbetrag, Kreuzprodukt und Skalarprodukt)-----
+
 float normInternal(int n, float *vector1)
 {
 	float result = 0;
@@ -322,8 +326,6 @@ float normInternal(int n, float *vector1)
 }
 
 
-
-//-----Unterfunktionen (Vektorbetrag, Kreuzprodukt und Skalarprodukt)-----
 void crossInternal(int n, float *vector1, float *vector2) {
     float result[n];
     int count1 = 1;

@@ -9,6 +9,7 @@ Datum: 4.12.2023
 2.0_6.12.2023 Einfuegen der while-Schleife
 */
 
+// Einbinden von Headerdateien und Bibliotheken.
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -17,24 +18,28 @@ Datum: 4.12.2023
 #include "brechungsindex.h"
 #include "totalreflektion.h"
 
+// Mit geom beginnt das Sub-Programm.
 void geom(void)
 {
+	// Variablen definieren
 	char ja[3] = "ja";
 	char Ja[3] = "Ja";
 	int formel = 0;
 	char weitereRechnungGeom[3] = "ja";
 	
+	// Durch die While-Schleife kann das Programm mehrmals ausgefuert werden.
 	while(strcmp (weitereRechnungGeom, ja) == 0 || strcmp (weitereRechnungGeom, Ja) == 0)
 	{
 		printf("\nFuer den Brechungsindex waehle die 1.\n");
 		printf("Fuer das Brechungsgesetz waehle die 2.\n");
 		printf("Fuer die Totalreflektion waehle die 3.\n");
 			
-		// Abfrage des gewuenschten Fachs.
+		// Abfrage des gewuenschten Programms.
 		printf("\nWelche Formel willst du benutzen:\n");
 		scanf("%i" ,&formel);
 		fflush(stdin);
 
+		// Aufrufen des gewuenschten Programms.
 		switch(formel)
 		{
 			case 1:
@@ -51,6 +56,7 @@ void geom(void)
 				return;
 		}
 		
+		// Abfrage ob eine weitere Rechnung durchgefuert werden soll.
 		printf("Willst du eine weitere Rechnung in der geometrischen Optik durchfueren? Wenn ja, dann schreibe ja oder Ja.\n");
 		scanf("%s", weitereRechnungGeom);
 		fflush(stdin);

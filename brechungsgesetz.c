@@ -8,14 +8,17 @@ Datum: 4.12.2023
 1.0_4.12.2023 Erste Version 
 */
 
+// Einbinden der Programmbibliotheken.
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 #include "brechungsgesetz.h"
 #define Pi (3.141592654)
 
+// Mit brechungsgesetz beginnt das Programm.
 void brechungsgesetz()
-{     
+{   
+	// Variablen definieren  
 	double T2 = 0;
 	double n1 = 0;
 	double n2 = 0;
@@ -24,6 +27,7 @@ void brechungsgesetz()
 	double ergebnis = 0;
 	double a = 0;
 	
+	// Durch die While-Schleife kann das Programm mehrmals ausgefuert werden.
 	while(a == 0)
 	{
 		printf("\nBitte gib einen Winkel Theta 2 an: \n");
@@ -31,6 +35,7 @@ void brechungsgesetz()
 		fflush(stdin);
 	}
 	
+	// Berechnung des Resultats samt ausgabe.
 	while(n1 < 1)
 	{	
 		printf("\nBitte gib die Brechzahl des inneren Materials an: \n");

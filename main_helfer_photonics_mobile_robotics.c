@@ -10,7 +10,7 @@ Datum: 4.12.2023
 3.0_6.12.2023 Einfuegen Unterprogramme Rezepte und Hangman.
 */
 
-// Einbinden von Headerdateien der Programmbibliothek.
+// Einbinden von Headerdateien und der Programmbibliotheken.
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
@@ -39,20 +39,19 @@ int main(void)
 	// Durch die While-Schleife kann das Programm mehrmals ausgefuert werden.
 	while(strcmp (weitereRechnung, ja) == 0 || strcmp (weitereRechnung, Ja) == 0)
 	{
-		// Hier wird ueberprueft, ob die Werte fuer die Faecher angezeigt werden sollen und anschliessend geprintet.
-			printf("\nFuer Geometrische Optik waehle die 1.\n");
-			printf("Fuer Mechanik waehle die 2.\n");
-			printf("Fuer Elektronik Aufgaben waehle die 3.\n");
-			printf("Fuer Elektronik Formeln waehle die 4.\n");
-			printf("Fuer Vektorgeometrie Formeln waehle die 5.\n");
-			printf("Fuer Rezepte waehle die 6.\n");
-			printf("Fuer Hangman waehle die 7.\n");
-			printf("Fuer Elektromagnetisches Spektrum waehle die 8.\n");
+		printf("\nFuer Geometrische Optik waehle die 1.\n");
+		printf("Fuer Mechanik waehle die 2.\n");
+		printf("Fuer Elektronik Aufgaben waehle die 3.\n");
+		printf("Fuer Elektronik Formeln waehle die 4.\n");
+		printf("Fuer Vektorgeometrie Formeln waehle die 5.\n");
+		printf("Fuer Rezepte waehle die 6.\n");
+		printf("Fuer Hangman waehle die 7.\n");
+		printf("Fuer Elektromagnetisches Spektrum waehle die 8.\n");
 		
 		// Abfrage des gewuenschten Fachs.
-			printf("\nWelches Fach willst du bearbeiten:\n");
-			scanf("%i" ,&fach);
-			fflush(stdin);
+		printf("\nWelches Fach willst du bearbeiten:\n");
+		scanf("%i" ,&fach);
+		fflush(stdin);
 		
 		// Aufrufen des gewuenschten Fachs.
 		switch(fach)
